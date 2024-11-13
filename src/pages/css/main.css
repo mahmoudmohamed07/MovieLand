@@ -1,0 +1,400 @@
+:root {
+    --red-background : #dd4343;
+    --brown-background : #9d681e ;
+    --blue-background : #006edc;
+    --yellow-background: #f7ca28 ;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+input {
+    border-style: none;
+    outline-style: none;
+}
+ul {
+    list-style: none ;
+}
+Link , a{
+    text-decoration: none !important;
+    font-style: none;
+    
+    
+}
+.container-nav {
+    background-color: var(--red-background);
+}
+.container-nav .logo {
+    width: 30px;
+    cursor: pointer;
+}
+.container-nav .form-control {
+    width: 400px;
+    border-radius: 5px !important;
+    padding-block: 3px;
+    
+}
+.container-nav .search-btn{
+    right: 8px;
+    padding-block: 3px;
+    border-radius: 0px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    color: var(--red-background) !important;
+    background-color: var(--yellow-background);
+    font-weight: bold;
+}
+.container-nav .search-btn:hover{
+    color: white !important;
+    font-weight: bold;
+}
+.container-nav ul li {
+    font-size: 16px;
+    font-weight:600;
+}
+.container-nav ul li:hover {
+    color: var(--yellow-background);
+    
+}
+
+.carousel {
+   
+}
+
+.slider {
+    position: relative;
+    width: 90%;
+    
+    overflow: hidden;
+    margin: auto;
+}
+.slides {
+    display: flex;
+    height: 600px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide .active {
+    
+    opacity: 1;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+.arrow:hover {
+    color: rgb(255, 123, 123);
+}
+.arrow:disabled{
+    color: rgba(0, 0, 0, 0.444);
+}
+.arrow.prev {
+    left: 10px;
+}
+
+.arrow.next {
+    right: 10px;
+}
+
+/************************************ - Cards Style - ***********************************************/
+.cards {
+    ::-webkit-scrollbar {
+        width: 10px; /* width of the scrollbar */
+        height: 12px;
+      }
+    
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* color of the track */
+      }
+    
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #ee6363; /* color of the scroll thumb */
+        border-radius: 5px; /* roundness of the scroll thumb */
+      }
+    
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--red-background); /* color of the scroll thumb on hover */
+      }
+}
+.cards .title {
+    color: var(--red-background);
+    position: relative;
+    h4{
+        margin-left: 20px;
+    }
+    svg{
+        margin: auto 10px;
+        font-size: 20px;
+        padding-inline: auto;
+        font-weight: bolder;
+    }
+}
+.cards .title:hover {
+
+    svg{
+        color:#eeba11;
+    }
+}
+.cards .title::before{
+    content: "";
+    height: 120%;
+    width: 6px;
+    background-color: #fcc616;
+    position: absolute;
+    top: -5px;
+    border-radius: 5px;
+}
+.cards .fav-section {
+    z-index: 10;
+}
+.cards .fav-section .fav {
+
+    top: 0x;
+    font-size: 50px;
+    color: #f7ca28d9;
+}
+.cards .fav-section:hover {
+    .fav{
+
+        color: #daad0bec    ;
+    }
+}
+.cards .fav-section span{ 
+    transform: translateX(-50%);
+    left: 50%;
+    top: -5px;
+    font-weight: bold;
+}
+
+
+.top-rated .card-deck {
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-bottom: 5px;
+}
+
+.top-rated .card-deck .toprated-item{
+    
+        display: inline-block;
+        width: 180px;
+       
+        margin-right: 15px;
+        img{
+            
+            width: 180px;
+            height: 250px;
+            
+        }
+        .card-body{
+            padding-bottom: 10px;
+        }
+        .card-title{
+            white-space: normal;
+            height: 48px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+        .card-text{
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+}
+.top-rated .card-deck .toprated-item .img-hover img:hover{
+    filter: brightness(70%);
+    
+    
+}
+/*====================================================== popular ========================================================*/
+
+.card-container .card-body {
+    height:350px;
+}
+.card-container .col-card {
+    cursor: pointer;
+
+}
+.card-container .col-card:hover{
+    box-shadow: 0 0px 15px rgb(0 0 0 / 0.2);
+}
+.card-container .card-body img {
+    background-size: cover;
+}
+.card-container .card-body .card-title {
+    height: 30px;
+}
+.card-container .card-body .card-des{
+    height: 220px;
+    overflow: hidden;
+    color:rgb(45, 45, 45);
+}
+.card-container .card-body .card-text{
+    bottom: 0px ;
+    position: absolute;
+}
+
+/******************************************** movie details *************************************************/
+.movie-details .header-section .back-img {
+    height: 80vh;
+    width: 100%;
+    position: absolute;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    margin: 0px auto;
+    
+    z-index: -1;
+}
+.movie-details .header-section .blur-img{
+    background-color: rgba(32, 35, 42, 0.833);
+    height: 80vh !important;
+    width: 100% !important;
+    display: block;
+    z-index: 10;
+    
+}
+.movie-details .header-section .movie-info {
+    top: 45px;
+    p{
+        color: #cbcbcbe7;
+    }
+}
+.movie-details .header-section .movie-info img {
+    width: 300px;
+}
+.movie-details .header-section .movie-info .rating .imdb-rating h4,
+.movie-details .header-section .movie-info .rating .popularity h4
+{
+    margin-right: 50px;
+    width: max-content;
+}
+.movie-details .header-section .movie-info .rating .popularity .icon{
+    padding: 3px 5px 3px 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 4px solid ;
+}
+
+.movie-details .header-section .movie-info .rating .genres{
+    padding: 5px 0px;
+    margin-inline: 4px;
+    width: 150px;
+    text-align: center;
+    display:  inline-block;
+    color: #eee;
+    border: 2px solid #eee ;
+    border-radius: 20px;
+}
+
+.img-video iframe{
+    border-radius: 10px;
+    z-index: 0;
+}
+.img-video .video-title{
+    z-index: 20;
+    top: 485px;
+    left: 12px;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.877);
+    padding: 3px 15px;
+    .logo {
+        width: 30px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+}
+.img-video .information .info-map{
+    margin-right: 10px;
+    border: 2px solid #006edc;
+    padding: 2px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.img-video .information .info-map:hover{
+    border: 2px solid #00921b !important;
+}
+
+.review {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/*************************************************** Footer *********************************************************/
+
+
+footer {
+    width: 100%;
+    background-color: rgb(69 96 127);
+    height: 450px;
+    margin-top: 50px;
+
+}
+footer .container .details{
+    padding-top: 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.433);
+}
+footer .container .details img {
+    height: 120px;
+    margin-top: 70px;
+}
+footer .container .details h3 {
+    color: white;
+    font-size: 22px;
+    width: max-content;
+
+}
+footer .container .details span {
+    color: rgba(255, 255, 255, 0.621);
+    cursor: pointer;
+    width: max-content;
+}
+footer .container .details span:hover {
+    color: rgb(255, 255, 255);
+}
+footer .container .details .submit {
+    background-color: #00a868;
+    color: white;
+    font-size: 20px;
+}
+footer .container .details .submit:hover {
+    background-color: #008250;
+
+}
+footer .container .social {
+    .right{
+        color: white;
+        font-size: 12px !important;
+    }
+    .icons .font-icon{
+        cursor: pointer;
+        color: white;
+    }
+    .icons .font-icon:hover{
+        color: #00df8a;
+    }
+}
